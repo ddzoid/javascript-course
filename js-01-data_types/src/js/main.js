@@ -187,5 +187,166 @@ console.log( typeof myBigInt ); // bigint
 console.log( `Resultado de myBigInt + 1n: ${ myBigInt + 1 }  `); // El segundo no es un BigInt
 console.log( `Resultado de myBigInt + 1n: ${ myBigInt + 1n }  `);
 
+myAge = null; // intensionalmente se borra el tipo de dato
 
+  // NO es correcto usar typeof con un dato null
 
+ console.log(`Tipo de dato en myAge: ${typeof myAge }`); // object
+
+ console.log(`myAge es null?  ${ myAge === null } `);// true
+
+/*
+
+ Tipo de dato boolean
+
+ Tiene dos estados: true y false
+
+ */
+
+ const isActive = true;
+
+ console.log( typeof isActive ); // boolean
+
+ Si uno de los operandos es un String, va a resultar en una concatenacion.
+
+ // --------------------------------------------------------------
+
+ /*
+
+   Conversion de datos (type casting)
+
+  
+
+   El type casting es el acto de convertir variables de un tipo de dato a otro.
+
+   Esto puede ser implícito(automático) o explícito (forzado por el desarrollador).
+
+ */
+
+   // Conversión implícita
+
+   const resultado = "5" + 2 ; // "52" Número convertido a string. Tener cuidado principalmente con la sumatoria, pues puede dar un numero o un string.
+
+   const multiplicacion =  "5" * 3; // 15 El string convertido a number
+
+   console.log( String( true ) ); // "true"
+
+console.log( String( null ) ); // 
+
+console.log( String( undefined ) ); // "undefined"
+
+console.log( String( [] ) ); // empty Array-> ""
+
+console.log( String( [2,3,4,5,null,3] ) ); // "2,3,4,5,,3"
+
+// Conversión implícita
+
+const resultado = "5" + 2 ; // "52" Número convertido a string
+
+const multiplicacion =  "5" * 3; // 15 El string convertido a number
+
+                  //     5   * 3 = 15
+
+const division =  "two" * 6; // NaN
+
+                 // NaN * 6 = NaN
+
+                 console.log( String( true ) ); // "true"
+
+console.log( String( null ) ); // 
+
+console.log( String( undefined ) ); // "undefined"
+
+console.log( String( [] ) ); // empty Array-> ""
+
+console.log( String( [2,3,4,5,null,3] ) ); // "2,3,4,5,,3"
+
+/*
+
+ Number() Vs parseInt() y parseFloat()
+
+  - Number convierte enteros y decimales
+
+  - Number devuelve NaN si la cadena contiene algún caracter no numérico
+
+  - Con parseInt y parseFloat, si la entrada comienza con un valor no numérico devuelve NaN
+
+  - parseInt convierte solo pa parte entera
+
+  - parseFloat convierte la parte entera y decimales
+
+  - parseInt y parseFloat realiza la conversión hasta encontrar un caracter no numérico
+
+*//*
+
+ Number() Vs parseInt() y parseFloat()
+
+  - Number convierte enteros y decimales
+
+  - Number devuelve NaN si la cadena contiene algún caracter no numérico
+
+  - Con parseInt y parseFloat, si la entrada comienza con un valor no numérico devuelve NaN
+
+  - parseInt convierte solo pa parte entera
+
+  - parseFloat convierte la parte entera y decimales
+
+  - parseInt y parseFloat realiza la conversión hasta encontrar un caracter no numérico
+
+*/
+
+console.log( Number("68.58") ); // 68.58
+
+console.log( parseInt("68.58") ); // 68
+
+console.log( parseFloat("68.58") ); // 68.58
+
+console.log( Number("68.58 dolares") ); // NaN
+
+console.log( parseInt("68.58 dolares") ); // 68
+
+console.log( parseFloat("68.58 dolares") ); // 65.58
+
+console.log( Number("$68.58 dolares") ); // NaN
+
+console.log( parseInt("$68.58 dolares") ); // NaN
+
+console.log( parseFloat("$68.58 dolares") ); // NaN
+
+console.log( Number("68-58") ); // NaN
+
+console.log( parseInt("68-58") ); // 68
+
+console.log( parseFloat("68-58") ); // 68
+
+console.log( Number( true ) ); // 1
+
+console.log( Number( false ) ); // 0
+
+console.log( Number( [] ) ); // 0
+
+console.log( Number( [30] ) ); // 30
+
+console.log( Number( [30,40] ) ); // NaN
+
+// Conversión a tipo boolean
+// En la conversión a boolean los siguientes valores son false:
+// ""(empty string), 0, NaN, null, undefined
+console.log( Boolean(1) ); // true
+console.log( Boolean(10000) ); // true
+console.log( Boolean(-1000) ); // true
+console.log( Boolean(0) ); // false
+console.log( Boolean(NaN) ); // false
+console.log( Boolean("") ); // false
+console.log( Boolean(" ") ); // true
+console.log( Boolean("1") ); // true
+console.log( Boolean("0") ); // true
+
+// Resumen:
+// Number()
+// [] (empty array) -> 0, [30]-> 30, [30,30]->NaN, false-> 0, true-> 1
+// String()
+// [] -> "", [12,2]->"12,2", function(){}-> "function(){}"
+// {} ->"[object,object]", {clave:valor, age:17} ->"[object,object]"
+// Para convertir un objeto a string, la forma correcta es usar
+// el método JSON.stringyfy( objeto );
