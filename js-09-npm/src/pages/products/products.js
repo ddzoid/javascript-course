@@ -1,6 +1,11 @@
 import "/src/css/styles.scss";
 import "./products.css"
+<<<<<<< HEAD
 import * as bootstrap from 'bootstrap'
+=======
+import * as bootstrap from 'bootstrap';
+
+>>>>>>> b56b36f6ab4158f019677218893525f2310129ef
 
 import { insertMainHeader } from "/src/modules/header/header";
 import { insertMainFooter } from "/src/modules/footer/footer";

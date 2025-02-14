@@ -4,12 +4,19 @@
   "description": "Sesión correspondiente a JS-09",
   "main": "/src/js/main.js",
   "type": "module",
+<<<<<<< HEAD
   
+=======
+>>>>>>> b56b36f6ab4158f019677218893525f2310129ef
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+>>>>>>> b56b36f6ab4158f019677218893525f2310129ef
   },
   "keywords": [
     "npm",

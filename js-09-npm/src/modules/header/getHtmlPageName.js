@@ -1,5 +1,6 @@
 
 /**
+<<<<<<< HEAD
 
  * Obtener el nombre de la página HTML
 
@@ -9,6 +10,12 @@
 
  */
 
+=======
+ * Obtener el nombre de la página HTML
+ * @param {string} filePath url del archivo html    
+ * @returns el nombre de la página html
+ */
+>>>>>>> b56b36f6ab4158f019677218893525f2310129ef
 const getHtmlPageName = ( filePath ) => {
     return filePath.split("/").pop();
 }
