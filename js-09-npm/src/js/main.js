@@ -3,6 +3,7 @@ import "/src/css/styles.scss"
 import { insertMainHeader } from "/src/modules/header/header";
 import { insertMainFooter } from "/src/modules/footer/footer";
 import { welcome } from "../pages/welcome/welcome";
+import * as bootstrap from 'bootstrap'
 
 /**
  * El método onload de window en JavaScript se utiliza para ejecutar 
@@ -12,8 +13,10 @@ import { welcome } from "../pages/welcome/welcome";
  * que el DOM (Document Object Model) y los recursos externos han terminado de cargarse.
  * 
  */
-document.getElementById("app").innerHTML = `
 
+// window.addEventListener( "load", ()  => 
+    document.getElementById("app").innerHTML =
+`
     ${ insertMainHeader() } 
     <main class="container text-center my-4">
         ${ welcome() }
